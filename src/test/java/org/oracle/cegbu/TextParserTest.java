@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class TextParserTest {
+    // Class under test
     Parser parser = new TextParser();
 
     @Test

@@ -8,6 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class MemoryBuildTableTest {
 
+    // Class under test
     BuildTable table = new MemoryBuildTable();
 
     @Test

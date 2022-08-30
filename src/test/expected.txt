@@ -1,6 +1,8 @@
-Contract ID 2345: 3 customer IDs
 Contract ID 2346: 2 customer IDs
-GeoZone us_east: 1 customer ID, build duration 3445s
-GeoZone us_east customers: 2343225
-GeoZone us_east: 4 customer ID, build duration 3445s
-GeoZone us_east customers: 1223456, 3244332, 1233456, 3244132
+Contract ID 2345: 3 customer IDs
+GeoZone eu_west: 2 customer IDs, build duration 4222.0s
+GeoZone eu_west customers: [3244332, 3244132]
+GeoZone us_west: 2 customer IDs, build duration 2216.0s
+GeoZone us_west customers: [1223456, 1233456]
+GeoZone us_east: 1 customer IDs, build duration 3445.0s
+GeoZone us_east customers: [2343225]
