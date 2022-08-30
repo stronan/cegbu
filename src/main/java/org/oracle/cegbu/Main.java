@@ -11,8 +11,12 @@ public class Main {
         Scanner in = new Scanner(System.in);
         while (in.hasNextLine()) {
             String buildLine = in.nextLine();
-            Build build = parser.parse(buildLine);
-            table.add(build);
+            try {
+                Build build = parser.parse(buildLine);
+                table.add(build);
+            } catch (ParseException e) {
+                failInputLine(buildLine);
+            }
         }
 
         // Analyse the build data
@@ -22,5 +26,9 @@ public class Main {
         // Generate a report
         PrintStream out = System.out;
         out.printf("%s: %s", "group", "data");
+    }
+
+    private static void failInputLine(String buildLine) {
+        System.err.println("WARN: Couldn't parse input line");
     }
 }
