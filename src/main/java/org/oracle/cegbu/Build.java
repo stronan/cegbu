@@ -1,5 +1,7 @@
 package org.oracle.cegbu;
 
+import java.util.Objects;
+
 /**
  * Represents a build of a project.
  */
@@ -43,6 +45,21 @@ public class Build {
 
     public int getBuildDuration() {
         return buildDuration;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Build build = (Build) o;
+        return buildDuration == build.buildDuration && customerId.equals(build.customerId) &&
+            contractId.equals(build.contractId) && geoZone.equals(build.geoZone) && teamCode.equals(build.teamCode) &&
+            projectCode.equals(build.projectCode);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(customerId, contractId, geoZone, teamCode, projectCode, buildDuration);
     }
 
     /**
